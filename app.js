@@ -24,3 +24,7 @@ app.listen(port, () => {
   console.log(`🚀 Server chạy tại http://localhost:${port}`);
   console.log(`📘 Swagger UI: http://localhost:${port}/api-docs`);
 });
+
+const cors = require('cors');
+
+app.use(cors());
