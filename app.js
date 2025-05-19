@@ -16,6 +16,10 @@ app.use('/', authRoutes);
 // Swagger
 setupSwagger(app);
 
+app.get('/', (req, res) => {
+  res.redirect('/api-docs'); // tự động chuyển hướng đến Swagger UI
+});
+
 app.listen(port, () => {
   console.log(`🚀 Server chạy tại http://localhost:${port}`);
   console.log(`📘 Swagger UI: http://localhost:${port}/api-docs`);
